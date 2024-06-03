@@ -1,11 +1,14 @@
-def check_even_list(num_list):
-    even=[]
-    for number in num_list:
-        if number % 2 == 0:
-            even.append(f'{number} is True')
+name=[("Ajith",7),('Aleena',8),('Job',4)]
+
+def hours(name):
+    largest=0
+    for x,y in name:
+        if y > largest:
+            largest=y
+            long=x
         else:
             pass
-    return even
+    return f'{long} worked the longest with {largest} hours'
 
-a= check_even_list([1,2,4])
-print(a)
+b=hours(name)
+print(b)
