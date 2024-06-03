@@ -1,14 +1,28 @@
-name=[("Ajith",7),('Aleena',8),('Job',4)]
+from random import shuffle
 
-def hours(name):
-    largest=0
-    for x,y in name:
-        if y > largest:
-            largest=y
-            long=x
-        else:
-            pass
-    return f'{long} worked the longest with {largest} hours'
+#create a guessing game
 
-b=hours(name)
-print(b)
+def shuffler(list):
+    shuffle(list)
+    return list
+
+def guess():
+    choice=input("enter your choice")
+    return int(choice)
+
+def guessgame(list,choice):
+    if list[choice]=="0":
+        print("correct guess")
+    else:
+        print("wrong")
+
+
+
+list=[1,3,4,5,7,6,4]
+
+shuffler(list)
+
+a=guess()
+
+guessgame(list,a)
+print(list)
