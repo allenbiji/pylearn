@@ -1,5 +1,7 @@
-def myfunc(*args,**kwargs):
-    return ('I need {} {}'.format(args[2],kwargs['food']))
+def sq(num):
+    return num**2
 
-b=myfunc(20,30,40,food='apple',fav='cow')
-print(b)
+lt=[2,4,5,6]
+
+print(list(map(sq,lt)))
+
