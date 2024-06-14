@@ -1,6 +1,11 @@
-def sq(num):
-    return  num > 2
+
 lt=[2,4,5]
 
-print(list(filter(sq,lt)))
+a=lambda num: num**3
+
+b = list(map(a,lt))
+print (b)
+
+
+
 
