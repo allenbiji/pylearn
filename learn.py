@@ -1,12 +1,13 @@
-def master_yoda(text):
-   new=text.split()
-   return " ".join(new[::-1])
-
-
-
-
+def has_33(nums):
+    for i in range(len(nums)-1):
+        if nums[i] == 3 and nums[i + 1] == 3:
+            return True
+    return False
 
 # Check
-print(master_yoda('I am home'))
-# Check
-master_yoda('We are ready')
+print(has_33([1, 3, 3]))  # Expected output: True
+print(has_33([1, 3, 1, 3]))  # Expected output: False
+print(has_33([3, 3, 1]))  # Expected output: True
+print(has_33([3, 1, 3]))  # Expected output: False
+
+
