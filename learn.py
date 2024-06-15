@@ -1,4 +1,12 @@
-def old_macdonald(name):
-   return name[:3].capitalize() + name[3:].capitalize()
+def master_yoda(text):
+   new=text.split()
+   return " ".join(new[::-1])
+
+
+
+
+
 # Check
-print(old_macdonald('macdonald'))
+print(master_yoda('I am home'))
+# Check
+master_yoda('We are ready')
