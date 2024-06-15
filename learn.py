@@ -1,13 +1,18 @@
-def has_33(nums):
-    for i in range(len(nums)-1):
-        if nums[i] == 3 and nums[i + 1] == 3:
-            return True
-    return False
+def summer_69(arr):
+    add = 0
+    skip = False
+
+    for i in range(len(arr)):
+        if arr[i] == 6:
+            skip = True
+        elif arr[i] == 9 and skip:
+            skip = False
+        elif not skip:
+            add += arr[i]
+
+    return add
 
 # Check
-print(has_33([1, 3, 3]))  # Expected output: True
-print(has_33([1, 3, 1, 3]))  # Expected output: False
-print(has_33([3, 3, 1]))  # Expected output: True
-print(has_33([3, 1, 3]))  # Expected output: False
-
-
+print(summer_69([1, 3, 5]))       # Expected output: 9 (1 + 3 + 5)
+print(summer_69([4, 5, 6, 7, 8, 9]))  # Expected output: 9 (4 + 5)
+print(summer_69([2, 1, 6, 9, 11]))  # Expected output: 14 (2 + 1 + 11)
