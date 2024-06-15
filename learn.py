@@ -1,17 +1,8 @@
-def lesser_of_two_evens(a,b):
-    if a %2==0 and b%2==0:
-        if a>b:
-            return b
-        else:
-            return a
-
-    else:
-        if a>b:
-            return a
-        else:
-            return b
+def same_start_letter(text):
+    words = text.split()  # Split the text into a list of words
+    if len(words) != 2:   # Check if there are exactly two words
+        return False
+    return words[0][0].lower() == words[1][0].lower()  # Compare the first letters
 
 # Check
-print(lesser_of_two_evens(2,4))
-# Check
-print(lesser_of_two_evens(2,5))
+print(same_start_letter("Crazy Kangaroo"))  # Expected output: True
