@@ -1,14 +1,26 @@
-class Animal():
+class Line:
 
-    def __init__(self):
-        print("Animal Created")
+    def __init__(self, coor1, coor2):
+        self.coor1=coor1
+        self.coor2=coor2
 
-    def eat(self):
-        print("Our dog is eating")
 
-    def __str__(self):
-        return f'This is the animal class'
 
-animal=Animal()
-animal.eat()
-print(animal)
+    def distance(self):
+        return ((self.coor2[1]-self.coor1[1])**2 + (self.coor2[0]-self.coor1[0])**2)**0.5
+
+
+    def slope(self):
+        return (self.coor2[1]-self.coor1[1])/(self.coor2[0]-self.coor1[0])
+
+
+
+# EXAMPLE OUTPUT
+
+coordinate1 = (3, 2)
+coordinate2 = (8, 10)
+
+li = Line(coordinate1, coordinate2)
+print(li.distance())
+
+print(li.slope())
