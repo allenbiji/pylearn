@@ -3,7 +3,7 @@ class Animal():
     def __init__(self):
         print("Animal Created")
 
-    def eat():
+    def eat(self):
         print("Our dog is eating")
 
 class Dog(Animal):
@@ -12,4 +12,5 @@ class Dog(Animal):
          print("Dog says hi")
 
 
-Dog.eat()
+animal=Animal()
+animal.eat()
