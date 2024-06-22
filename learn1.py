@@ -1,13 +1,15 @@
 class Animal():
 
-    def __init__(self,name,age):
-        self.name=name
-        self.age=age
+    def __init__(self):
+        print("Animal Created")
 
-    def info(self,breed):
-        print(f'The name of the dog is {self.name}, he is {self.age} years old and his breed is {breed}')
+    def eat():
+        print("Our dog is eating")
+
+class Dog(Animal):
+     def __init__(self):
+         Animal.__init__()
+         print("Dog says hi")
 
 
-
-dog=Animal("Jake",3)
-dog.info("Pug")
+Dog.eat()
