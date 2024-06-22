@@ -6,11 +6,9 @@ class Animal():
     def eat(self):
         print("Our dog is eating")
 
-class Dog(Animal):
-     def __init__(self):
-         Animal.__init__()
-         print("Dog says hi")
-
+    def __str__(self):
+        return f'This is the animal class'
 
 animal=Animal()
 animal.eat()
+print(animal)
