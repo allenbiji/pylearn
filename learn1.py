@@ -1,26 +1,47 @@
-class Line:
-
-    def __init__(self, coor1, coor2):
-        self.coor1=coor1
-        self.coor2=coor2
 
 
+class Account:
+    def __init__(self, owner, balance):
+        self.owner = owner
+        self.balance = balance
 
-    def distance(self):
-        return ((self.coor2[1]-self.coor1[1])**2 + (self.coor2[0]-self.coor1[0])**2)**0.5
+    def __str__(self):
+        return (f'Account owner: {self.owner}\n'
+                f'Account Balance: ${self.balance}')
+
+    def deposit(self, number):
+        self.balance += number
+        print("Deposit Accepted")
+        return self.balance
+
+    def withdraw(self, number):
+        if number <= self.balance:
+            self.balance -= number
+            print("Withdrawal accepted")
+        else:
+            print('Funds Unavailable')
+
+# 1. Instantiate the class
+acct1 = Account('Jose', 100)
+
+# 2. Print the object
+print(acct1)
+
+# 3. Show the account owner attribute
+acct1.owner
+
+# 4. Show the account balance attribute
+print(acct1.balance)
+
+# 5. Make a series of deposits and withdrawals
+acct1.deposit(50)
+# Deposit Accepted
+acct1.withdraw(75)
+# Withdrawal Accepted
+
+# 6. Make a withdrawal that exceeds the available balance
+acct1.withdraw(500)
+# Funds Unavailable
 
 
-    def slope(self):
-        return (self.coor2[1]-self.coor1[1])/(self.coor2[0]-self.coor1[0])
 
-
-
-# EXAMPLE OUTPUT
-
-coordinate1 = (3, 2)
-coordinate2 = (8, 10)
-
-li = Line(coordinate1, coordinate2)
-print(li.distance())
-
-print(li.slope())
