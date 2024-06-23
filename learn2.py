@@ -1,17 +1,7 @@
-dict={"name":"allen",'age':24,'exp':13}
 
-dict["role"]='data science'
-print(dict)
+dict={'name':'kelly','age':25,'salary':800,'city':'new york'}
 
-
-dict.popitem()
-print(dict)
-dict.pop('age')
-print(dict)
-dict["role"]='data science'
-dict["role"]='data science'
-dict["role"]='data science'
-
-print(dict.values())
-print(dict.items())
-print(dict.keys())
+if 8000 in dict.values():
+    print('present')
+else:
+    print('not present')
