@@ -1,7 +1,15 @@
+l1=['amma','allen',1001,2000,2002]
 
-dict={'name':'kelly','age':25,'salary':800,'city':'new york'}
-
-if 8000 in dict.values():
-    print('present')
-else:
-    print('not present')
+for i in l1:
+    if type(i)==int:
+        a=str(i)[::-1]
+        if int(a)==i:
+            print("palindrome")
+        else:
+            print("not palindrome")
+    else:
+        a=i[::-1]
+        if a==i:
+            print("palindrome")
+        else:
+            print("not palindrome")
