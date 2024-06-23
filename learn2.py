@@ -1,7 +1,17 @@
-list=[1,7,1,3,4,3,2,6,3]
+dict={"name":"allen",'age':24,'exp':13}
 
-x,y=list[0],list[len(list)-1]
-x,y=y,x
-list[0],list[len(list)-1]=x,y
+dict["role"]='data science'
+print(dict)
 
-print(list)
+
+dict.popitem()
+print(dict)
+dict.pop('age')
+print(dict)
+dict["role"]='data science'
+dict["role"]='data science'
+dict["role"]='data science'
+
+print(dict.values())
+print(dict.items())
+print(dict.keys())
