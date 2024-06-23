@@ -1,13 +1,7 @@
-odd=[]
-even=[]
+output=[]
+list=[1,2,3]
 
-n=int(input('Enter a no. '))
+for i in list:
+    output.append((i,i**3))
 
-for i in range(1,n+1):
-    if i%2==0:
-        even.append(i)
-    else:
-        odd.append(i)
-
-print(odd)
-print(even)
+print(output)
