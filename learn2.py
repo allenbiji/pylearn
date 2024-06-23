@@ -1,15 +1,18 @@
-l1=['amma','allen',1001,2000,2002]
+class ShoppingCart:
 
-for i in l1:
-    if type(i)==int:
-        a=str(i)[::-1]
-        if int(a)==i:
-            print("palindrome")
-        else:
-            print("not palindrome")
-    else:
-        a=i[::-1]
-        if a==i:
-            print("palindrome")
-        else:
-            print("not palindrome")
+    def __init__(self):
+        self.list=[]
+
+    def add_item(self,item,qty,price):
+        return self.list.append((item,qty,price))
+
+    def remove_item(self,item,qty):
+
+    def __str__(self):
+        return f'Shopping cart : {self.list}'
+
+
+
+c=ShoppingCart()
+c.add_item('a',20,30)
+print(c)
