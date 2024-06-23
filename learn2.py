@@ -1,11 +1,9 @@
-import random
+def vowel_or_cons(alphabet):
+    if alphabet in 'aeiouAEIOU':
+        print('Given alphabet is a vowel')
+    else:
+        print('Given alphabet is a consonant')
 
 
-def rand_num(low,high,n):
-    for i in range(n):
-        yield random.randint(low,high)
-
-
-
-for num in rand_num(1,10,12):
-    print(num)
+ae=input("Alphabet")
+vowel_or_cons(ae)
