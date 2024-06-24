@@ -1,18 +1,13 @@
-class ShoppingCart:
+import numpy as np
 
-    def __init__(self):
-        self.list=[]
-
-    def add_item(self,item,qty,price):
-        return self.list.append((item,qty,price))
-
-    def remove_item(self,item,qty):
-
-    def __str__(self):
-        return f'Shopping cart : {self.list}'
-
-
-
-c=ShoppingCart()
-c.add_item('a',20,30)
+a=np.array([1,2,3,4])
+b=np.array([(1,2,3),(1,4,5)])
+c=np.array([[(1,2,3),(2,4,3)],[(3,4,2),(2,3,4)]])
+print(a)
+print(b)
 print(c)
+
+print(c.ndim)
+print(c.shape)
+print(c.size)
+print(c.itemsize)
