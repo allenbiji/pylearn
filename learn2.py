@@ -1,13 +1,16 @@
 import numpy as np
+from matplotlib import pyplot as plt
 
-a=np.array([1,2,3,4])
-b=np.array([(1,2,3),(1,4,5)])
-c=np.array([[(1,2,3),(2,4,3)],[(3,4,2),(2,3,4)]])
-print(a)
-print(b)
-print(c)
+a=np.arange(1,9,3)
+b1=np.arange(1,9,3)
+b2=np.arange(1,9,3)
 
-print(c.ndim)
-print(c.shape)
-print(c.size)
-print(c.itemsize)
+plt.plot(a,b1,label='Line 1')
+plt.plot(a,b2,label='Line 2')
+
+plt.title('Example')
+plt.xlabel('a')
+plt.ylabel('b')
+
+plt.legend(loc='best')
+plt.show()
