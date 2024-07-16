@@ -1,16 +1,10 @@
 import numpy as np
-from matplotlib import pyplot as plt
+import matplotlib.pyplot as plt
+import statsmodels.api as sm
+import pandas as pd
 
-a=np.arange(1,9,3)
-b1=np.arange(1,9,3)
-b2=np.arange(1,9,3)
+data=pd.read_csv("1.01.+Simple+linear+regression.csv")
 
-plt.plot(a,b1,label='Line 1')
-plt.plot(a,b2,label='Line 2')
+y=data["GPA"]
+x1=data["SAT"]
 
-plt.title('Example')
-plt.xlabel('a')
-plt.ylabel('b')
-
-plt.legend(loc='best')
-plt.show()
