@@ -1,16 +1,30 @@
 from fastapi import FastAPI
+from pydantic import BaseModel
+from typing import List,Optional
+from uuid import UUID,uuid4
 
 app = FastAPI()
 
-student={
-    1:{"name":"john",
-       "class":"3"}
-}
-@app.get("/")
-def index():
-    return {"name":"First Data"}
+class Task(BaseModel):
+    id: Optional[UUID]=None
+    title:str
+    description:Optional[str]=None
+    completed: bool=False
 
-@app.get("/get-student")
-def get_student(student_id: int):
-    return student[student_id]
+tasks=[]
+
+@app.post("/tasks/",response_model=Task)
+def create(task:Task):
+    task.id=uuid4()
+    tasks.append(task)
+    return task
+
+@app.get("/tasks/",response_model=List[Task])
+def read():
+    return tasks
+
+if __name__=="__main__":
+    import uvicorn
+    uvicorn.run(app,host="0.0.0.0",port=8000)
+
 
