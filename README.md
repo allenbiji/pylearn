@@ -1,2 +1,2 @@
 # pylearn
-learning python
+learning pytho
